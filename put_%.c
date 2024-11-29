@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:36:09 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/29 19:16:25 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/11/29 21:48:31 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,20 @@ int	put_str(va_list arg)
 	if (str == NULL)
 		return (write(1, "(null)", 6));
 	return (write(1, str, ft_strlen(str)));
+}
+
+/**
+ * put_nbr - prints a number
+ * Return: the number of written bytes
+ */
+int	put_nbr(va_list arg)
+{
+	char	*n;
+	int		written;
+
+	n = ft_itoa(va_arg(arg, int));
+	written = write(1, n, ft_strlen(n));
+	if (n != NULL)
+		free(n);
+	return (written);
 }

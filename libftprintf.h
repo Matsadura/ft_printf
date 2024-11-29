@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 19:18:17 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/29 19:23:43 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/11/29 20:33:54 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int	get_spec_func(char s, t_spec *sp, va_list arg);
 int	put_mod(va_list arg);
 int	put_char(va_list arg);
 int	put_str(va_list arg);
+int	put_nbr(va_list arg);
 
 #endif /* LIBFTPRINTF_H */
