@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 20:53:45 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/28 19:20:32 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/11/29 19:24:11 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 /**
  * init - Initializes the spec array
  */
-void	init(t_spec **spec)
+int	init(t_spec **spec)
 {
 	static t_spec	sp[] = {
 	{'%', put_mod},
 	{'c', put_char},
+	{'s', put_str},
 	{'\0', NULL}
 	};
 
 	*spec = sp;
+	return (1337);
 }
 
 /**
@@ -47,19 +49,3 @@ int	get_spec_func(char s, t_spec *sp, va_list arg)
 	}
 	return (write(1, &s, 1));
 }
-
-
-/**
- *
- */
-//int	write_result(char c, t_spec *sp, void *arg)
-//{
-//	int	(*f)(void *);
-//
-//	f = get_spec_func(c, sp);
-//	if (f)
-//		return (f(arg));
-//	else
-//		return (write(1, &c, 1));
-//
-//}
