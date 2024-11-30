@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:36:09 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/30 17:36:29 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/11/30 17:39:15 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	put_nbr(va_list arg)
 /**
  * put_nbr - prints an unsigned number
  * @arg: unsigned number to print (from va_list)
- * Return: the string representing the integer, NULL otherwise.
+ * Return: the number of written bytes
  */
 int	put_unbr(va_list arg)
 {

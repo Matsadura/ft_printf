@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 20:53:45 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/29 20:34:33 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/11/30 18:06:48 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	init(t_spec **spec)
 	{'d', put_nbr},
 	{'i', put_nbr},
 	{'u', put_unbr},
+	{'x', put_xlower},
+	{'X', put_xupper},
 	{'\0', NULL}
 	};
 
