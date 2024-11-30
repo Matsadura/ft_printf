@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_%.c                                            :+:      :+:    :+:   */
+/*   put_%idsu.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 21:36:09 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/29 21:48:31 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/11/30 17:36:29 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 /**
  * put_mod - prints a modulo
+ * @arg: argument to print (from va_list)
  * Return: the number of written bytes
  */
 int	put_mod(va_list arg)
@@ -24,6 +25,7 @@ int	put_mod(va_list arg)
 
 /**
  * putc - prints a character
+ * @arg: character to print (from va_list)
  * Return: the number of written bytes
  */
 int	put_char(va_list arg)
@@ -36,6 +38,7 @@ int	put_char(va_list arg)
 
 /**
  * put_str - prints a string
+ * @arg: string to print (from va_list)
  * Return: The number of written bytes
  */
 int	put_str(va_list arg)
@@ -50,6 +53,7 @@ int	put_str(va_list arg)
 
 /**
  * put_nbr - prints a number
+ * @arg: number to print (from va_list)
  * Return: the number of written bytes
  */
 int	put_nbr(va_list arg)
@@ -65,9 +69,8 @@ int	put_nbr(va_list arg)
 }
 
 /**
- * ft_itoa - Allocates and returns a string reprresenting
- *              an integer received as argument.
- * @n: the integer to convert
+ * put_nbr - prints an unsigned number
+ * @arg: unsigned number to print (from va_list)
  * Return: the string representing the integer, NULL otherwise.
  */
 int	put_unbr(va_list arg)
