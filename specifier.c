@@ -23,6 +23,7 @@ int	init(t_spec **spec)
 	{'s', put_str},
 	{'d', put_nbr},
 	{'i', put_nbr},
+	{'u', put_unbr},
 	{'\0', NULL}
 	};
 

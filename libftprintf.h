@@ -33,5 +33,6 @@ int	put_mod(va_list arg);
 int	put_char(va_list arg);
 int	put_str(va_list arg);
 int	put_nbr(va_list arg);
+int	put_unbr(va_list arg);
 
 #endif /* LIBFTPRINTF_H */

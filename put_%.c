@@ -63,3 +63,32 @@ int	put_nbr(va_list arg)
 		free(n);
 	return (written);
 }
+
+/**
+ * ft_itoa - Allocates and returns a string reprresenting
+ *              an integer received as argument.
+ * @n: the integer to convert
+ * Return: the string representing the integer, NULL otherwise.
+ */
+int	put_unbr(va_list arg)
+{
+	char			buff[12];
+	unsigned int	n;
+	unsigned int	m;
+	int				i;
+
+	n = va_arg(arg, unsigned int);
+	i = 0;
+	if (n == 0)
+		return (write(1, "0", 1));
+	m = 1;
+	while (n / m >= 10)
+		m *= 10;
+	while (m >= 1)
+	{
+		buff[i++] = ((n / m) % 10) + '0';
+		m /= 10;
+	}
+	buff[i] = '\0';
+	return (write(1, &buff, ft_strlen(buff)));
+}
