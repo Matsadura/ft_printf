@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 19:18:17 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/30 18:31:30 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/11/30 21:21:04 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int	put_nbr(va_list arg);
 int	put_unbr(va_list arg);
 int	put_xlower(va_list arg);
 int	put_xupper(va_list arg);
+int	put_p(va_list arg);
 
 #endif /* LIBFTPRINTF_H */
