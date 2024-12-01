@@ -1,28 +1,26 @@
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 NAME = libftprintf.a
-LIBFT = libft.a
 SRC = printf.c \
       put_%idsu.c \
       put_pxX.c \
-      specifier.c
-OBJ = $(SRC:%.c=%.o)
+      specifier.c \
+	  helpers.c
+OBJ = $(SRC:.c=.o)
 
-all: $(LIBFT) $(NAME)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIBFT):
-	make -C libft/
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean:
 	rm $(OBJ)
-	make -C libft/ clean
 
 fclean:
 	rm -rf $(NAME) $(OBJ)
-	make -C libft/ fclean
 
 re: fclean all
 

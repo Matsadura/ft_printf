@@ -10,11 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# include "libft/libft.h"
+//# include "libft/libft.h"
 # include <stdarg.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <unistd.h>
+# include <stdint.h>
 
 typedef struct s_spec
 {
@@ -38,4 +43,9 @@ int	put_xlower(va_list arg);
 int	put_xupper(va_list arg);
 int	put_p(va_list arg);
 
-#endif /* LIBFTPRINTF_H */
+/* Helpers */
+size_t	ft_strlen(const char *str);
+char	*ft_strdup(const char *s);
+char	*ft_itoa(int n);
+
+#endif /* FT_PRINTF_H */

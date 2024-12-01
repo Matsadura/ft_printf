@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 /**
  * put_x - Prints a number in hexadecimal
@@ -30,10 +30,6 @@ int	put_xlower(va_list arg)
 	n = va_arg(arg, unsigned int);
 	if (n == 0)
 		return (write(1, "0", 1));
-	if (n < 0)
-	{
-		n *= -1;
-	}
 	m = 1;
 	while (n / m >= 16)
 		m *= 16;
@@ -64,10 +60,6 @@ int	put_xupper(va_list arg)
 	n = va_arg(arg, unsigned int);
 	if (n == 0)
 		return (write(1, "0", 1));
-	if (n < 0)
-	{
-		n *= -1;
-	}
 	m = 1;
 	while (n / m >= 16)
 		m *= 16;
@@ -96,8 +88,6 @@ int	put_p(va_list arg)
 	n = va_arg(arg, unsigned long int);
 	if (n == 0)
 		return (write(1, "0", 1));
-	if (n < 0)
-		n *= -1;
 	m = 1;
 	while (n / m >= 16)
 		m *= 16;
