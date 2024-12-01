@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 17:46:46 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/12/01 09:20:05 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/12/01 16:44:35 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	put_p(va_list arg)
 	i = 0;
 	n = va_arg(arg, unsigned long int);
 	if (n == 0)
-		return (write(1, "0", 1));
+		return (write(1, "(nil)", ft_strlen("(nil)")));
 	m = 1;
 	while (n / m >= 16)
 		m *= 16;
