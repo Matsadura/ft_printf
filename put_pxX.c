@@ -6,7 +6,7 @@
 /*   By: zzaoui <zzaoui@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 17:46:46 by zzaoui            #+#    #+#             */
-/*   Updated: 2024/11/30 21:35:36 by zzaoui           ###   ########.fr       */
+/*   Updated: 2024/12/01 09:20:05 by zzaoui           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,26 @@ int	put_xupper(va_list arg)
  */
 int	put_p(va_list arg)
 {
-	int	n;
+	char			buff[16];
+	char			*base;
 
+	unsigned long int (n), (m), (i);
+	base = "0123456789abcdef";
+	i = 0;
+	n = va_arg(arg, unsigned long int);
+	if (n == 0)
+		return (write(1, "0", 1));
+	if (n < 0)
+		n *= -1;
+	m = 1;
+	while (n / m >= 16)
+		m *= 16;
+	while (m >= 1)
+	{
+		buff[i++] = base[(n / m) % 16];
+		m /= 16;
+	}
+	buff[i] = '\0';
 	write(1, "0x", 2);
-	n = put_xlower(arg);
-	return (n + 2);
+	return (write(1, &buff, ft_strlen(buff)) + 2);
 }
