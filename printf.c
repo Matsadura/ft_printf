@@ -22,9 +22,8 @@ int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	t_spec	*spec;
-	int		i;
-	int		written;
 
+	int (written), (i), (count);
 	if (str == NULL)
 		return (-1);
 	written = 0;
@@ -35,13 +34,15 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%' && str[i + 1] != '\0')
 		{
-			written += get_spec_func(str[i + 1], spec, args);
+			count = get_spec_func(str[i + 1], spec, args);
 			i += 1;
 		}
 		else
-			written += write(1, &str[i], 1);
+			count = write(1, &str[i], 1);
+		if (count == -1)
+			return (va_end(args), -1);
+		written += count;
 		i++;
 	}
-	va_end(args);
-	return (written);
+	return (va_end(args), written);
 }
